@@ -18,3 +18,15 @@ To install Node.js 12.x and npm, run the following commands:
 curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
+
+# Verify the installation:
+node -v
+# v12.11.1
+
+npm -v
+# 6.11.3
+
+##Install Project Dependencies
+In your project directory, install Jest, Babel, and ESLint using the provided package.json:
+
+npm install

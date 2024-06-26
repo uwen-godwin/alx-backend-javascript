@@ -18,7 +18,7 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    'eol-last': ['error', 'always'],    'no-console': 'off',
+    'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': [
       'error',
@@ -26,10 +26,10 @@ module.exports = {
       'WithStatement',
     ],
   },
-  overrides: [
+  overrides:[
     {
       files: ['*.js'],
-      excludedFiles: 'babel.config.js',  
+      excludedFiles: 'babel.config.js',
     }
   ]
 };

@@ -22,7 +22,7 @@ This project focuses on using ES6 Promises in JavaScript. It includes various ta
 
 2. **Clone the Repository**
     ```bash
-    git clone https://github.com/your-username/0x01-ES6_promise.git
+    git clone https://github.com/uwen-godwin/0x01-ES6_promise.git
     cd 0x01-ES6_promise
     ```
 

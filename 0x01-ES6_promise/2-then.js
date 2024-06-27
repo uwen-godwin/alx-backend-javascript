@@ -1,4 +1,4 @@
- function handleResponseFromAPI(promise) {
+function handleResponseFromAPI(promise) {
   return promise
     .then(() => {
       return {

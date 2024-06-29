@@ -1,7 +1,12 @@
 export default function createIteratorObject(report) {
-  let employees = [];
-  for (const department in report.allEmployees) {
-    employees = employees.concat(report.allEmployees[department]);
+  const employees = [];
+
+  for (const department in report) {
+      if (Object.prototype.hasOwnProperty.call(report, department)) {
+          for (const employee of report[department]) {
+              employees.push(employee);
+          }
+      }
   }
 
   return employees[Symbol.iterator]();

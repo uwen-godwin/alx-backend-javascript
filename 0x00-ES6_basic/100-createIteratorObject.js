@@ -9,5 +9,18 @@ export default function createIteratorObject(report) {
       }
   }
 
-  return employees[Symbol.iterator]();
+  return {
+      [Symbol.iterator]() {
+          let step = 0;
+          return {
+              next() {
+                  if (step < employees.length) {
+                      return { value: employees[step++], done: false };
+                  } else {
+                      return { value: undefined, done: true };
+                  }
+              }
+          };
+      }
+  };
 }

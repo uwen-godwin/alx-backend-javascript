@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 async function asyncUploadUser() {
   try {
@@ -12,7 +12,7 @@ async function asyncUploadUser() {
       user: userResponse
     };
   } catch (error) {
-    console.error("Error occurred during async operations:", error);
+    console.error('Error occurred during async operations:', error);
     return {
       photo: null,
       user: null

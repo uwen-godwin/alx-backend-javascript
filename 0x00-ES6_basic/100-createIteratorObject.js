@@ -3,8 +3,9 @@ export default function createIteratorObject(report) {
 
   for (const department in report) {
       if (Object.prototype.hasOwnProperty.call(report, department)) {
-          for (const employee of report[department]) {
-              employees.push(employee);
+          const departmentEmployees = report[department];
+          for (let i = 0; i < departmentEmployees.length; i++) {
+              employees.push(departmentEmployees[i]);
           }
       }
   }

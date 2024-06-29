@@ -4,11 +4,9 @@
  * @returns {Promise<Object>} - Object with status and body attributes on resolve,
  *                              Empty Error object on reject.
  */
-
 export default function handleResponseFromAPI(promise) {
-  return promise.then(() => {
-    console.log("Got a response from the API");
-    return { st
-      atus: 200, body: 'success' };
-  }).catch(() => new Error());
+  return promise
+    .then(() => ({ status: 200, body: 'success' }))
+    .catch(() => new Error())
+    .finally(() => console.log('Got a response from the API'));
 }

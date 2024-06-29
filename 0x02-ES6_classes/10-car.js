@@ -10,8 +10,8 @@
   }
 
   cloneCar() {
-    const Species = this.constructor[Symbol.species];
-    return new Species(this._brand, this._motor, this._color);
+    const CloningConstructor = this.constructor[Symbol.species];
+    return new CloningConstructor(this._brand, this._motor, this._color);
   }
 }
 

@@ -17,7 +17,7 @@ async function asyncUploadUser() {
       photo: null,
       user: null
     };
-  }
+  } 
 }
 
 export default asyncUploadUser;

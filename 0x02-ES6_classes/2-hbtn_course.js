@@ -17,7 +17,7 @@ export default class HolbertonCourse {
       throw new TypeError('Students must be an array of strings');
     }
 
-    this._students = students.slice(); // Store a copy of students array
+    this._students = students.slice();
   }
 
   // Getter and setter for name
@@ -53,6 +53,6 @@ export default class HolbertonCourse {
     if (!Array.isArray(newStudents) || !newStudents.every(student => typeof student === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
-    this._students = newStudents.slice(); // Store a copy of newStudents array
+    this._students = newStudents.slice();
   }
 }

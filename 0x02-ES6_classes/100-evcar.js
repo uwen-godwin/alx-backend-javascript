@@ -1,4 +1,4 @@
-import EVCar from './100-evcar'; // Corrected import statement without .js extension
+import EVCar from './100-evcar';
 
 class Car {
     constructor(make, model, color) {
@@ -25,9 +25,9 @@ console.log(ec1);
 const ec2 = ec1.cloneCar();
 console.log(ec2);
 
-console.log(ec1 instanceof EVCar); // Should print: true
-console.log(ec2 instanceof Car);   // Should print: true
-console.log(ec2 instanceof EVCar); // Should print: false
-console.log(ec1 === ec2);          // Should print: false (using === for strict equality)
+console.log(ec1 instanceof EVCar);
+console.log(ec2 instanceof Car);
+console.log(ec2 instanceof EVCar);
+console.log(ec1 === ec2);
 
-export default EVCar; // If you want to export EVCar
+export default EVCar;

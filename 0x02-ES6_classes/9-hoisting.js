@@ -1,5 +1,4 @@
-// Define HolbertonClass for representing a class year and location
-export class HolbertonClass {
+ export class HolbertonClass {
   constructor(year, location) {
     this._year = year;
     this._location = location;
@@ -14,8 +13,7 @@ export class HolbertonClass {
   }
 }
 
-// Define StudentHolberton for representing a Holberton student
-export class StudentHolberton {
+ export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
     this._firstName = firstName;
     this._lastName = lastName;
@@ -35,16 +33,15 @@ export class StudentHolberton {
   }
 }
 
-// Create instances of HolbertonClass for different class years and locations
+
 const class2019 = new HolbertonClass(2019, 'San Francisco');
 const class2020 = new HolbertonClass(2020, 'San Francisco');
 
-// Create instances of StudentHolberton for different students
-const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
+ const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
 const student2 = new StudentHolberton('John', 'Doe', class2020);
 const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
 const student4 = new StudentHolberton('Donald', 'Bush', class2019);
 const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
 
-// Export listOfStudents array containing all student instances
+
 export const listOfStudents = [student1, student2, student3, student4, student5];

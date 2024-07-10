@@ -8,8 +8,6 @@ import uploadPhoto from './5-photo-reject';
  * @param {string} fileName - The file name of the photo to upload.
  * @returns {Promise<Array>} A promise that resolves with an array of results.
  */
-
-
 export default function handleProfileSignup(firstName, lastName, fileName) {
   // Execute both promises concurrently and return the combined result.
   return Promise.allSettled([

@@ -1,12 +1,20 @@
+import signUpUser from './4-user-promise';
+import uploadPhoto from './5-photo-reject';
+
 /**
- * Appends handlers to the given Promise.
- * @param {Promise<any>} promise - The Promise to handle.
- * @returns {Promise<Object>} - Object with status and body attributes on resolve,
- *                              Empty Error object on reject.
+ * Handles profile signup by signing up a user and uploading a photo.
+ * @param {string} firstName - The first name of the user.
+ * @param {string} lastName - The last name of the user.
+ * @param {string} fileName - The file name of the photo to upload.
+ * @returns {Promise<Array>} A promise that resolves with an array of results.
  */
-export default function handleResponseFromAPI(promise) {
-  return promise
-    .then(() => ({ status: 200, body: 'success' }))
-    .catch(() => new Error())
-    .finally(() => console.log('Got a response from the API'));
+export default function handleProfileSignup(firstName, lastName, fileName) {
+  // Execute both promises concurrently and return the combined result.
+  return Promise.allSettled([
+    signUpUser(firstName, lastName),
+    uploadPhoto(fileName),
+  ]).then(results => results.map(result => ({
+    status: result.status,
+    value: result.status === 'fulfilled' ? result.value : result.reason,
+  })));
 }

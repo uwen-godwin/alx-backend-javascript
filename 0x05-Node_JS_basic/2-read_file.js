@@ -3,7 +3,7 @@ const fs = require('fs');
 function countStudents(path) {
   try {
     const data = fs.readFileSync(path, 'utf8').trim();
-    const lines = data.split('\n').filter(line => line.length > 0);
+    const lines = data.split('\n').filter((line) => line.length > 0);
     const totalStudents = lines.length - 1;
 
     console.log(`Number of students: ${totalStudents}`);

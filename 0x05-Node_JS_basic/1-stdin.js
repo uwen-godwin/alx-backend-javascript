@@ -14,7 +14,11 @@ rl.question('', (name) => {
   // Output the user's name
   console.log(`Your name is: ${name}`);
 
-  // Close the readline interface and print the closing message
+  // Close the readline interface
   rl.close();
+});
+
+// Listen for the 'close' event to print the closing message
+rl.on('close', () => {
   console.log('This important software is now closing');
 });

@@ -7,7 +7,7 @@ function countStudents(path) {
         reject(new Error('Cannot load the database'));
         return;
       }
-      const lines = data.trim().split('\n').filter(line => line.length > 0);
+      const lines = data.trim().split('\n').filter((line) => line.length > 0);
       const totalStudents = lines.length - 1;
 
       console.log(`Number of students: ${totalStudents}`);

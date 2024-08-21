@@ -3,7 +3,7 @@ const readline = require('readline');
 // Create an interface for input and output streams
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
 // Display the welcome message
